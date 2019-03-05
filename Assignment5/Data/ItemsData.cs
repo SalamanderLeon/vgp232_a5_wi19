@@ -28,7 +28,15 @@ namespace Assignment5.Data
         public List<Item> UnlockedItemsAtLevel(int level)
         {
             // TODO: implement function to get all items and add unit to confirm it works.
-            throw new NotImplementedException();
+            List<Item> items = new List<Item>();
+            for (int i = 0; i < Items.Count; i++)
+            {
+                if(level >= items[i].UnlockRequirement)
+                {
+                    items.Add(items[i]);
+                }
+            }
+            return items;
         }
 
         /// <summary>
@@ -39,7 +47,15 @@ namespace Assignment5.Data
         public Item FindItem(string name)
         {
             // TODO: implement function to find the item with the name specified.
-            throw new NotImplementedException();
+            Item item = new Item();
+            for (int i = 0; i < Items.Count; i++)
+            {
+                if(Items[i].Name == name)
+                {
+                    item.Name = Items[i].Name;
+                }
+            }
+            return item;
         }
     }
 }
