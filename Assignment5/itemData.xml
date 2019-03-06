@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ItemsData>
+<Items>
+  <Item>
+    <Name>Potion</Name>
+    <UnlockRequirement>5</UnlockRequirement>
+    <Description>A spray-type medicine that restores the HP of one Pokémon by 20 points.</Description>
+    <Effect></Effect>
+  </Item>
+  <Item>
+    <Name>Super Potion</Name>
+    <UnlockRequirement>10</UnlockRequirement>
+    <Description>A spray-type medicine that restores the HP of one Pokémon by 50 points.</Description>
+    <Effect></Effect>
+  </Item>
+  <Item>
+    <Name>Hyper Potion</Name>
+    <UnlockRequirement>15</UnlockRequirement>
+    <Description>A spray-type medicine that restores the HP of one Pokémon by 200 points.</Description>
+    <Effect></Effect>
+  </Item>
+  <Item>
+    <Name>Max Potion</Name>
+    <UnlockRequirement>25</UnlockRequirement>
+    <Description>A spray-type medicine that completely restores all HP of a single Pokémon.</Description>
+    <Effect></Effect>
+  </Item>
+  <Item>
+    <Name>Poke ball</Name>
+    <UnlockRequirement>0</UnlockRequirement>
+    <Description>A device for caching wild Pokémon. It&apos;s thrown like a ball at a Pokémon, comfortably encapsulating its target.</Description>
+    <Effect></Effect>
+  </Item>
+  <Item>
+    <Name>Great ball</Name>
+    <UnlockRequirement>12</UnlockRequirement>
+    <Description>A high-performance Poké Ball with a higher catch rate than a standard Poké Ball.</Description>
+    <Effect>Applies a 1.5x catch rate multiplier to the target.</Effect>
+  </Item>
+  <Item>
+    <Name>Ultra ball</Name>
+    <UnlockRequirement>20</UnlockRequirement>
+    <Description>An ultra-performance ball with a higher catch rate than a Great Ball.</Description>
+    <Effect>Applies a 2x catch modifier to the target.</Effect>
+  </Item>
+  <Item>
+    <Name>Premier ball</Name>
+    <UnlockRequirement>5</UnlockRequirement>
+    <Description>A ball given for catching Raid Bosses. Premier Balls cannot be switched out for other Poke Balls, Great Balls, or Ultra Balls in your inventory, and excess Premier Balls are not retained.</Description>
+    <Effect>Has the same catch rate as a regular Poke Ball.</Effect>
+  </Item>
+  <Item>
+    <Name>Razz Berry</Name>
+    <UnlockRequirement>8</UnlockRequirement>
+    <Description>Feed this to a Pokémon to make it easier to catch.</Description>
+    <Effect>Applies a 1.5x catch rate multiplier on the next successful throw.</Effect>
+  </Item>
+  <Item>
+    <Name>Nanba Berry</Name>
+    <UnlockRequirement>14</UnlockRequirement>
+    <Description>Feed this to a Pokemon to calm it down, making it less erratic.</Description>
+    <Effect>Reduces the likelihood of a Pokemon moving or attacking by a factor of 20. Also restores slightly more motivation when used in a Gym.</Effect>
+  </Item>
+  <Item>
+    <Name>Pinap Berry</Name>
+    <UnlockRequirement>18</UnlockRequirement>
+    <Description>Feed this to a Pokemon to receive more Candy if you catch it.</Description>
+    <Effect>Rewards 2x Candy if the Pokemon is caught on the next successful throw.</Effect>
+  </Item>
+  <Item>
+    <Name>Golden Razz Berry</Name>
+    <UnlockRequirement>0</UnlockRequirement>
+    <Description>Feed this to a Pokemon to make it much easier to catch.</Description>
+    <Effect>Applies a 2.5x catch rate multiplier on the next successful throw.</Effect>
+  </Item>
+  <Item>
+    <Name>Silver Pinap Berry</Name>
+    <UnlockRequirement>0</UnlockRequirement>
+    <Description>Feed this to a Pokémon to receive more Candy when you catch it and make it easier to catch.</Description>
+    <Effect>Applies a 1.8x catch rate multiplier and rewards 2x Candy if the Pokemon is caught on the next successful throw.</Effect>
+  </Item>
+  <Item>
+    <Name>Revive</Name>
+    <UnlockRequirement>5</UnlockRequirement>
+    <Description>A medicine that can revive fainted Pokémon. It also restores half of a fainted Pokémon&apos;s maximum HP.</Description>
+    <Effect></Effect>
+  </Item>
+  <Item>
+    <Name>Max Revive</Name>
+    <UnlockRequirement>30</UnlockRequirement>
+    <Description>A medicine that can revive fainted Pokémon. It also fully restores a fainted Pokémon&apos;s maximum HP.</Description>
+    <Effect></Effect>
+  </Item>
+</Items>
+</ItemsData>
