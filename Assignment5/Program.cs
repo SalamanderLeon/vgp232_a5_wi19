@@ -123,8 +123,7 @@ namespace Assignment5
                 }
             }
             reader.Save("Mybag.xml", PokedexforBag);
-            PokemonReader reader3 = new PokemonReader();
-            pokedex = reader3.Load("Mybag.xml");
+            pokedex = reader.Load("Mybag.xml");
             foreach (Pokemon pokemon in pokedex.Pokemons)
             {
                 Console.WriteLine(pokedex.GetPokemonByIndex(pokemon.Index).Name);
