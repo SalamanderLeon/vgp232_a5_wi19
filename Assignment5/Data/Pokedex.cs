@@ -161,7 +161,7 @@ namespace Assignment5.Data
                 poke.Defense = Highest;
                 poke.Name = Name;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
             }

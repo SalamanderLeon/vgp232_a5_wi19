@@ -57,6 +57,11 @@
     <Compile Include="Data\Pokedex.cs" />
     <Compile Include="Data\Pokemon.cs" />
     <Compile Include="Data\Entry.cs" />
+    <Compile Include="Data\NUNITtest1.cs" />
+    <Compile Include="Data\Pokedex.cs" />
+    <Compile Include="Data\Pokemon.cs" />
+    <Compile Include="Data\PokemonBag.cs" />
+    <Compile Include="Data\PokemonReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,8 +75,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="NUnitTestforInventory.xml" />
+    <Content Include="Mybag.xml" />
     <Content Include="pokemon151.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
