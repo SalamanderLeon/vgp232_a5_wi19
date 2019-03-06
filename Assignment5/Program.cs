@@ -17,39 +17,23 @@ namespace Assignment5
         {
             Console.WriteLine("Welcome to Assignment 5 - Pokemon Edition");
             PokemonReader reader = new PokemonReader();
-            if (!File.Exists("pokemon151.xml"))
-            {
-                throw new Exception("File doesn't exist: pokemon151.xml");
-            }
-            Pokedex pokedex = reader.Load("pokemon151.xml");
+            
             PokemonBag Bag = new PokemonBag();
             Pokedex PokedexforBag = new Pokedex();
-            // List out all the pokemons loaded
-            
-            foreach (Pokemon pokemon in pokedex.Pokemons)
-            {
-                Console.WriteLine(pokemon.Name);
+
             // TODO: load the pokemon151 xml
             string Pokemonfile = "pokemon151.xml";
-            Pokedex pokedex = new Pokedex();
             if (!File.Exists(Pokemonfile))
             {
                 throw new Exception(string.Format("{0} does not exist", Pokemonfile));
             }
-            using (var reader = new StreamReader(Pokemonfile))
+            Pokedex pokedex = reader.Load(Pokemonfile);
+            // List out all the pokemons loaded
+            Console.WriteLine("Pokemon list: ");
+            foreach (Pokemon pokemon in pokedex.Pokemons)
             {
-                XmlSerializer serializers = new XmlSerializer(typeof(Pokedex));
-                try
-                {
-                    pokedex = serializers.Deserialize(reader) as Pokedex;
-                    Console.WriteLine("File has been loaded: {0}", Pokemonfile);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Cannot load {0} due to the following {1}", Pokemonfile, ex.Message);
-                }
+                Console.WriteLine(pokemon.Name);
             }
-
             // TODO: Add item reader and print out all the items
             string ItemDataPath = "itemData.xml";
             if (!File.Exists(ItemDataPath))
@@ -57,13 +41,14 @@ namespace Assignment5
                 throw new Exception(string.Format("{0} does not exist", ItemDataPath));
             }
             ItemsData itemsData = new ItemsData();
-            using (var reader = new StreamReader(ItemDataPath))
+            using (var reader1 = new StreamReader(ItemDataPath))
             {
                 XmlSerializer serializers = new XmlSerializer(typeof(ItemsData));
                 try
                 {
-                    itemsData = serializers.Deserialize(reader) as ItemsData;
-                    Console.WriteLine("File has been loaded: {0}", ItemDataPath);
+                    itemsData = serializers.Deserialize(reader1) as ItemsData;
+                    Console.WriteLine("");
+                    Console.WriteLine("Item list: ");
                 }
                 catch (Exception ex)
                 {
@@ -92,12 +77,12 @@ namespace Assignment5
             using (var writer = XmlWriter.Create(inventoryFile))
                 (new XmlSerializer(typeof(Inventory))).Serialize(writer, source);
 
-            using (var reader = new StreamReader(inventoryFile))
+            using (var reader2 = new StreamReader(inventoryFile))
             {
                 var serializer = new XmlSerializer(typeof(Inventory));
                 try
                 {
-                    Inventory inventory = serializer.Deserialize(reader) as Inventory;
+                    Inventory inventory = serializer.Deserialize(reader2) as Inventory;
                     if (inventory != null)
                     {
                         foreach (var item in inventory.ItemToQuantity)
@@ -109,11 +94,9 @@ namespace Assignment5
 
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Cannot load {0} due to the following {1}", 
+                    Console.WriteLine("Cannot load {0} due to the following {1}",
                         inventoryFile, ex.Message);
                 }
-
-            }
             }
             Bag.Pokemons.Add(pokedex.GetPokemonByName("Bulbasaur").Index);
             Bag.Pokemons.Add(pokedex.GetPokemonByName("Bulbasaur").Index);
@@ -140,8 +123,8 @@ namespace Assignment5
                 }
             }
             reader.Save("Mybag.xml", PokedexforBag);
-            PokemonReader reader2 = new PokemonReader();
-            pokedex = reader.Load("Mybag.xml");
+            PokemonReader reader3 = new PokemonReader();
+            pokedex = reader3.Load("Mybag.xml");
             foreach (Pokemon pokemon in pokedex.Pokemons)
             {
                 Console.WriteLine(pokedex.GetPokemonByIndex(pokemon.Index).Name);

@@ -54,8 +54,6 @@
     <Compile Include="Data\ItemsData.cs" />
     <Compile Include="Data\Item.cs" />
     <Compile Include="Data\NUNITtest2.cs" />
-    <Compile Include="Data\Pokedex.cs" />
-    <Compile Include="Data\Pokemon.cs" />
     <Compile Include="Data\Entry.cs" />
     <Compile Include="Data\NUNITtest1.cs" />
     <Compile Include="Data\Pokedex.cs" />
