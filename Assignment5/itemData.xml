@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<ItemsData>
 <Items>
   <Item>
     <Name>Potion</Name>
@@ -91,3 +92,4 @@
     <Effect></Effect>
   </Item>
 </Items>
+</ItemsData>

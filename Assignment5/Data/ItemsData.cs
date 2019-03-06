@@ -7,9 +7,11 @@ using System.Xml.Serialization;
 
 namespace Assignment5.Data
 {
+    [XmlRoot("ItemsData")]
     public class ItemsData
     {
-        [XmlArray]
+        [XmlArray("Items")]
+        [XmlArrayItem("Item")]
         public List<Item> Items { get; set; }
 
         /// <summary>

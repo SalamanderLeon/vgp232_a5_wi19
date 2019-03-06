@@ -25,16 +25,16 @@ namespace Assignment5
             }
             using (var reader = new StreamReader(Pokemonfile))
             {
-                var serializers = new XmlSerializer(typeof(Pokedex));
+                XmlSerializer serializers = new XmlSerializer(typeof(Pokedex));
                 try
                 {
                     pokedex = serializers.Deserialize(reader) as Pokedex;
+                    Console.WriteLine("File has been loaded: {0}", Pokemonfile);
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Cannot load {0} due to the following {1}", Pokemonfile, ex.Message);
                 }
-
             }
 
             // TODO: Add item reader and print out all the items
@@ -43,24 +43,29 @@ namespace Assignment5
             {
                 throw new Exception(string.Format("{0} does not exist", ItemDataPath));
             }
+            ItemsData itemsData = new ItemsData();
             using (var reader = new StreamReader(ItemDataPath))
             {
-                var serializers = new XmlSerializer(typeof(ItemsData));
+                XmlSerializer serializers = new XmlSerializer(typeof(ItemsData));
                 try
                 {
-                    ItemsData itemsData = serializers.Deserialize(reader) as ItemsData;
-
-                    foreach (Item item in itemsData.Items)
-                {
-                    Console.WriteLine("Name: {0}", item.Name);
-                    Console.WriteLine("Requirement: {0}", item.UnlockRequirement);
-                    Console.WriteLine("Description: {0}", item.Description);
-                    Console.WriteLine("Effect: {0}", item.Effect);
-                }
+                    itemsData = serializers.Deserialize(reader) as ItemsData;
+                    Console.WriteLine("File has been loaded: {0}", ItemDataPath);
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Cannot load {0} due to the following {1}", ItemDataPath, ex.Message);
+                }
+                finally
+                {
+                    foreach (Item item in itemsData.Items)
+                    {
+                        Console.WriteLine("Name: {0}", item.Name);
+                        Console.WriteLine("Requirement: {0}", item.UnlockRequirement);
+                        Console.WriteLine("Description: {0}", item.Description);
+                        Console.WriteLine("Effect: {0}", item.Effect);
+                        Console.WriteLine("");
+                    }
                 }
                 
             }
