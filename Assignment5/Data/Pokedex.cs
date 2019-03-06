@@ -22,13 +22,19 @@ namespace Assignment5.Data
         public Pokemon GetPokemonByIndex(int index)
         {
             Pokemon poke = new Pokemon();
-            for (int i = 0; i < Pokemons.Count; i++)
+            try
             {
-                if(Pokemons[i].Index == index)
+                for (int i = 0; i < Pokemons.Count; i++)
                 {
-                    poke.Index = Pokemons[i].Index;
-                    Console.WriteLine(index);
-                } 
+                    if (Pokemons[i].Index == index)
+                    {
+                        poke = Pokemons[i];
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
             }
             return poke;
         }
@@ -36,15 +42,22 @@ namespace Assignment5.Data
         public Pokemon GetPokemonByName(string name)
         {
             Pokemon poke = new Pokemon();
-            for (int i = 0; i < Pokemons.Count; i++)
+            try
             {
-                if(Pokemons[i].Name == name)
+                for (int i = 0; i < Pokemons.Count; i++)
                 {
-                    poke.Name = Pokemons[i].Name;
-                    Console.WriteLine(name);
-                    
+                    if (Pokemons[i].Name == name)
+                    {
+                        poke = Pokemons[i];
+
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
             return poke;
         }
 
@@ -52,19 +65,27 @@ namespace Assignment5.Data
         {
             List<Pokemon> poke = new List<Pokemon>();
             // Note to check both Type1 and Type2
-            for (int i = 0; i < Pokemons.Count; i++)
+            try
             {
-                if(Pokemons[i].Type1 == type)
+                for (int i = 0; i < Pokemons.Count; i++)
                 {
-                    poke.Add(Pokemons[i]);
-                    Console.WriteLine(type);
-                }
-                if (Pokemons[i].Type2 == type)
-                {
-                    poke.Add(Pokemons[i]);
-                    Console.WriteLine(type);
+                    if (Pokemons[i].Type1 == type)
+                    {
+                        poke.Add(Pokemons[i]);
+                        Console.WriteLine(type);
+                    }
+                    if (Pokemons[i].Type2 == type)
+                    {
+                        poke.Add(Pokemons[i]);
+                        Console.WriteLine(type);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
             return poke;
         }
 
@@ -73,17 +94,25 @@ namespace Assignment5.Data
             Pokemon poke = new Pokemon();
             int Highest = 0;
             string Name = "";
-            for (int i = 0; i < Pokemons.Count; i++)
+            try
             {
-                if(Pokemons[i].HP> Highest)
+                for (int i = 0; i < Pokemons.Count; i++)
                 {
-                    Highest = Pokemons[i].HP;
-                    Name = Pokemons[i].Name;
+                    if (Pokemons[i].HP > Highest)
+                    {
+                        Highest = Pokemons[i].HP;
+                        Name = Pokemons[i].Name;
+                    }
                 }
+                poke.HP = Highest;
+                poke.Name = Name;
+                Console.WriteLine("The highest health point is {0}, and {1}", Highest, Name);
             }
-            poke.HP = Highest;
-            poke.Name = Name;
-            Console.WriteLine("The highest health point is {0}, and {1}", Highest, Name);
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
             return poke;
         }
 
@@ -92,17 +121,24 @@ namespace Assignment5.Data
             Pokemon poke = new Pokemon();
             int Highest = 0;
             string Name = "";
-            for (int i = 0; i < Pokemons.Count; i++)
+            try
             {
-                if (Pokemons[i].Attack > Highest)
+                for (int i = 0; i < Pokemons.Count; i++)
                 {
-                    Highest = Pokemons[i].Attack;
-                    Name = Pokemons[i].Name;
+                    if (Pokemons[i].Attack > Highest)
+                    {
+                        Highest = Pokemons[i].Attack;
+                        Name = Pokemons[i].Name;
+                    }
                 }
+                poke.Attack = Highest;
+                poke.Name = Name;
+                Console.WriteLine("The highest attack is {0}, and {1}", Highest, Name);
             }
-            poke.Attack = Highest;
-            poke.Name = Name;
-            Console.WriteLine("The highest attack is {0}, and {1}", Highest, Name);
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
             return poke;
         }
 
@@ -111,17 +147,25 @@ namespace Assignment5.Data
             Pokemon poke = new Pokemon();
             int Highest = 0;
             string Name = "";
-            for (int i = 0; i < Pokemons.Count; i++)
+            try
             {
-                if (Pokemons[i].Defense > Highest)
+                for (int i = 0; i < Pokemons.Count; i++)
                 {
-                    Highest = Pokemons[i].Defense;
-                    Name = Pokemons[i].Name;
+                    if (Pokemons[i].Defense > Highest)
+                    {
+                        Highest = Pokemons[i].Defense;
+                        Name = Pokemons[i].Name;
+                    }
                 }
+                Console.WriteLine("The highest defense is {0}, {1}", Highest, Name);
+                poke.Defense = Highest;
+                poke.Name = Name;
             }
-            Console.WriteLine("The highest defense is {0}, {1}", Highest, Name);
-            poke.Defense = Highest;
-            poke.Name = Name;
+            catch(Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
             return poke;
         }
 
@@ -130,17 +174,25 @@ namespace Assignment5.Data
             Pokemon poke = new Pokemon();
             int Highest = 0;
             string Name = "";
-            for (int i = 0; i < Pokemons.Count; i++)
+            try
             {
-                if (Pokemons[i].MaxCP > Highest)
+                for (int i = 0; i < Pokemons.Count; i++)
                 {
-                    Highest = Pokemons[i].MaxCP;
-                    Name = Pokemons[i].Name;
+                    if (Pokemons[i].MaxCP > Highest)
+                    {
+                        Highest = Pokemons[i].MaxCP;
+                        Name = Pokemons[i].Name;
+                    }
                 }
+                Console.WriteLine("The highest Max CP is {0}, and {1}", Highest, Name);
+                poke.MaxCP = Highest;
+                poke.Name = Name;
             }
-            Console.WriteLine("The highest Max CP is {0}, and {1}", Highest, Name);
-            poke.MaxCP = Highest;
-            poke.Name = Name;
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
             return poke;
         }
 
