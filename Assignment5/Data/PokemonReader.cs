@@ -48,6 +48,12 @@ namespace Assignment5.Data
 
             return dex;
         }
-
+        public void Save(string filepath, Pokedex pokedex)
+        {
+            using (var file = new StreamWriter(filepath))
+            {
+                serializer.Serialize(file, pokedex);
+            }
+        }
     }
 }

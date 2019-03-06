@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pokedex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pokemons>
+    <Pokemon>
+      <Index>1</Index>
+      <Name>Bulbasaur</Name>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <HP>128</HP>
+      <Attack>118</Attack>
+      <Defense>111</Defense>
+      <MaxCP>1115</MaxCP>
+    </Pokemon>
+    <Pokemon>
+      <Index>1</Index>
+      <Name>Bulbasaur</Name>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <HP>128</HP>
+      <Attack>118</Attack>
+      <Defense>111</Defense>
+      <MaxCP>1115</MaxCP>
+    </Pokemon>
+    <Pokemon>
+      <Index>6</Index>
+      <Name>Charizard</Name>
+      <Type1>Fire</Type1>
+      <Type2>Flying</Type2>
+      <HP>186</HP>
+      <Attack>223</Attack>
+      <Defense>173</Defense>
+      <MaxCP>2889</MaxCP>
+    </Pokemon>
+    <Pokemon>
+      <Index>149</Index>
+      <Name>Dragonite</Name>
+      <Type1>Dragon</Type1>
+      <Type2>Flying</Type2>
+      <HP>209</HP>
+      <Attack>263</Attack>
+      <Defense>198</Defense>
+      <MaxCP>3792</MaxCP>
+    </Pokemon>
+    <Pokemon>
+      <Index>151</Index>
+      <Name>Mew</Name>
+      <Type1>Psychic</Type1>
+      <Type2 />
+      <HP>225</HP>
+      <Attack>210</Attack>
+      <Defense>210</Defense>
+      <MaxCP>3265</MaxCP>
+    </Pokemon>
+  </Pokemons>
+</Pokedex>

@@ -19,40 +19,181 @@ namespace Assignment5.Data
             Pokemons = new List<Pokemon>();
         }
 
-        Pokemon GetPokemonByIndex(int index)
+        public Pokemon GetPokemonByIndex(int index)
         {
-            throw new NotImplementedException();
+            Pokemon poke = new Pokemon();
+            try
+            {
+                for (int i = 0; i < Pokemons.Count; i++)
+                {
+                    if (Pokemons[i].Index == index)
+                    {
+                        poke = Pokemons[i];
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+            return poke;
         }
 
-        Pokemon GetPokemonByName(string name)
+        public Pokemon GetPokemonByName(string name)
         {
-            throw new NotImplementedException();
+            Pokemon poke = new Pokemon();
+            try
+            {
+                for (int i = 0; i < Pokemons.Count; i++)
+                {
+                    if (Pokemons[i].Name == name)
+                    {
+                        poke = Pokemons[i];
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
+            return poke;
         }
 
-        List<Pokemon> GetPokemonsOfType(string type)
+        public List<Pokemon> GetPokemonsOfType(string type)
         {
+            List<Pokemon> poke = new List<Pokemon>();
             // Note to check both Type1 and Type2
-            throw new NotImplementedException();
+            try
+            {
+                for (int i = 0; i < Pokemons.Count; i++)
+                {
+                    if (Pokemons[i].Type1 == type)
+                    {
+                        poke.Add(Pokemons[i]);
+                        Console.WriteLine(type);
+                    }
+                    if (Pokemons[i].Type2 == type)
+                    {
+                        poke.Add(Pokemons[i]);
+                        Console.WriteLine(type);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
+            return poke;
         }
 
-        Pokemon GetHighestHPPokemon()
+        public Pokemon GetHighestHPPokemon()
         {
-            throw new NotImplementedException();
+            Pokemon poke = new Pokemon();
+            int Highest = 0;
+            string Name = "";
+            try
+            {
+                for (int i = 0; i < Pokemons.Count; i++)
+                {
+                    if (Pokemons[i].HP > Highest)
+                    {
+                        Highest = Pokemons[i].HP;
+                        Name = Pokemons[i].Name;
+                    }
+                }
+                poke.HP = Highest;
+                poke.Name = Name;
+                Console.WriteLine("The highest health point is {0}, and {1}", Highest, Name);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
+            return poke;
         }
 
-        Pokemon GetHighestAttackPokemon()
+        public Pokemon GetHighestAttackPokemon()
         {
-            throw new NotImplementedException();
+            Pokemon poke = new Pokemon();
+            int Highest = 0;
+            string Name = "";
+            try
+            {
+                for (int i = 0; i < Pokemons.Count; i++)
+                {
+                    if (Pokemons[i].Attack > Highest)
+                    {
+                        Highest = Pokemons[i].Attack;
+                        Name = Pokemons[i].Name;
+                    }
+                }
+                poke.Attack = Highest;
+                poke.Name = Name;
+                Console.WriteLine("The highest attack is {0}, and {1}", Highest, Name);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+            return poke;
         }
 
-        Pokemon GetHighestDefensePokemon()
+        public Pokemon GetHighestDefensePokemon()
         {
-            throw new NotImplementedException();
+            Pokemon poke = new Pokemon();
+            int Highest = 0;
+            string Name = "";
+            try
+            {
+                for (int i = 0; i < Pokemons.Count; i++)
+                {
+                    if (Pokemons[i].Defense > Highest)
+                    {
+                        Highest = Pokemons[i].Defense;
+                        Name = Pokemons[i].Name;
+                    }
+                }
+                Console.WriteLine("The highest defense is {0}, {1}", Highest, Name);
+                poke.Defense = Highest;
+                poke.Name = Name;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
+            return poke;
         }
 
-        Pokemon GetHighestMaxCPPokemon()
+        public Pokemon GetHighestMaxCPPokemon()
         {
-            throw new NotImplementedException();
+            Pokemon poke = new Pokemon();
+            int Highest = 0;
+            string Name = "";
+            try
+            {
+                for (int i = 0; i < Pokemons.Count; i++)
+                {
+                    if (Pokemons[i].MaxCP > Highest)
+                    {
+                        Highest = Pokemons[i].MaxCP;
+                        Name = Pokemons[i].Name;
+                    }
+                }
+                Console.WriteLine("The highest Max CP is {0}, and {1}", Highest, Name);
+                poke.MaxCP = Highest;
+                poke.Name = Name;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement the code error: {0}", ex.Message));
+            }
+
+            return poke;
         }
 
     }

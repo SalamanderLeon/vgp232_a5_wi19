@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pokedex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pokemons>
+    <Pokemon>
+      <Index>25</Index>
+      <Name>Pikachu</Name>
+      <Type1>Electric</Type1>
+      <Type2 />
+      <HP>111</HP>
+      <Attack>112</Attack>
+      <Defense>96</Defense>
+      <MaxCP>938</MaxCP>
+    </Pokemon>
+    <Pokemon>
+      <Index>25</Index>
+      <Name>Pikachu</Name>
+      <Type1>Electric</Type1>
+      <Type2 />
+      <HP>111</HP>
+      <Attack>112</Attack>
+      <Defense>96</Defense>
+      <MaxCP>938</MaxCP>
+    </Pokemon>
+    <Pokemon>
+      <Index>34</Index>
+      <Name>Nidoking</Name>
+      <Type1>Poison</Type1>
+      <Type2>Ground</Type2>
+      <HP>191</HP>
+      <Attack>204</Attack>
+      <Defense>156</Defense>
+      <MaxCP>2567</MaxCP>
+    </Pokemon>
+  </Pokemons>
+</Pokedex>
