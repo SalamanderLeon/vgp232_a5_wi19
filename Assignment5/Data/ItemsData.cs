@@ -31,13 +31,21 @@ namespace Assignment5.Data
         {
             // TODO: implement function to get all items and add unit to confirm it works.
             List<Item> items = new List<Item>();
-            for (int i = 0; i < Items.Count; i++)
+            try
             {
-                if(level >= items[i].UnlockRequirement)
+                for (int i = 0; i < Items.Count; i++)
                 {
-                    items.Add(items[i]);
+                    if (level >= items[i].UnlockRequirement)
+                    {
+                        items.Add(items[i]);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement by {0}", ex.Message));
+            }
+
             return items;
         }
 
@@ -50,13 +58,21 @@ namespace Assignment5.Data
         {
             // TODO: implement function to find the item with the name specified.
             Item item = new Item();
-            for (int i = 0; i < Items.Count; i++)
+            try
             {
-                if(Items[i].Name == name)
+                for (int i = 0; i < Items.Count; i++)
                 {
-                    item.Name = Items[i].Name;
+                    if (Items[i].Name == name)
+                    {
+                        item.Name = Items[i].Name;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("Can't implement by {0}", ex.Message));
+            }
+
             return item;
         }
     }

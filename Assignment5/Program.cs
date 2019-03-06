@@ -60,11 +60,7 @@ namespace Assignment5
                 {
                     foreach (Item item in itemsData.Items)
                     {
-                        Console.WriteLine("Name: {0}", item.Name);
-                        Console.WriteLine("Requirement: {0}", item.UnlockRequirement);
-                        Console.WriteLine("Description: {0}", item.Description);
-                        Console.WriteLine("Effect: {0}", item.Effect);
-                        Console.WriteLine("");
+                        Console.WriteLine(itemsData.FindItem(item.Name).Name);
                     }
                 }
                 
